@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./CSS/accord.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+      var cont = 0;
+      function loopSlider() {
+        var xx = setInterval(function() {
+          switch (cont) {
+            case 0: {
+              $("#slider-1").fadeOut(400);
+              $("#slider-2")
+                .delay(400)
+                .fadeIn(400);
+              $("#sButton1").removeClass("bg-purple-800");
+              $("#sButton2").addClass("bg-purple-800");
+              cont = 1;
+
+              break;
+            }
+            case 1: {
+              $("#slider-2").fadeOut(400);
+              $("#slider-1")
+                .delay(400)
+                .fadeIn(400);
+              $("#sButton2").removeClass("bg-purple-800");
+              $("#sButton1").addClass("bg-purple-800");
+
+              cont = 0;
+
+              break;
+            }
+          }
+        }, 8000);
+      }
+
+      function reinitLoop(time) {
+        clearInterval(xx);
+        setTimeout(loopSlider(), time);
+      }
+
+      function sliderButton1() {
+        $("#slider-2").fadeOut(400);
+        $("#slider-1")
+          .delay(400)
+          .fadeIn(400);
+        $("#sButton2").removeClass("bg-purple-800");
+        $("#sButton1").addClass("bg-purple-800");
+        reinitLoop(4000);
+        cont = 0;
+      }
+
+      function sliderButton2() {
+        $("#slider-1").fadeOut(400);
+        $("#slider-2")
+          .delay(400)
+          .fadeIn(400);
+        $("#sButton1").removeClass("bg-purple-800");
+        $("#sButton2").addClass("bg-purple-800");
+        reinitLoop(4000);
+        cont = 1;
+      }
+
+      $(window).ready(function() {
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-purple-800");
+
+        loopSlider();
+      });
+    </script>
+
+    <style>
+      /* body {
+        font-family: Arial, sans-serif;
+        background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg)
+          no-repeat;
+        background-size: cover;
+        height: 100vh;
+      } */
+
+      h1 {
+        text-align: center;
+        font-family: Tahoma, Arial, sans-serif;
+        color: #06d85f;
+        margin: 80px 0;
+      }
+
+      .box {
+        width: 40%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 35px;
+        border: 2px solid #fff;
+        border-radius: 20px/50px;
+        background-clip: padding-box;
+        text-align: center;
+      }
+
+      .button {
+        font-size: 1em;
+        padding: 10px;
+        color: black;
+        border: 2px solid rgb(6, 122, 216);
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
+      .button:hover {
+        background: rgb(36, 115, 218);
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .overlay:target {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+        transition: all 5s ease-in-out;
+      }
+
+      .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+      }
+      .popup .close:hover {
+        color: rgb(6, 122, 216);
+      }
+      .popup .content {
+        margin-top: 5%;
+        max-height: 30%;
+        overflow: auto;
+      }
+
+      @media screen and (max-width: 700px) {
+        .box {
+          width: 70%;
+        }
+        .popup {
+          width: 70%;
+        }
+      }
+    </style>
+
+    <style>
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+    <script type="text/javascript">
+      function OpenNewWindow() {
+        window.open(
+          (toolbar = no),
+          (status = no),
+          (menubar = no),
+          (location = center),
+          (scrollbars = no),
+          (resizable = no),
+          (height = 500),
+          (width = 657)
+        );
+      }
+    </script>
+
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+      (function() {
+        var options = {
+          whatsapp: "+91 9421113857", // WhatsApp number
+          call_to_action: "Message us", // Call to action
+          position: "right" // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol,
+          host = "getbutton.io",
+          url = proto + "//static." + host;
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = url + "/widget-send-button/js/init.js";
+        s.onload = function() {
+          WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+    <!-- /GetButton.io widget -->
+
+    <script>
+       $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+    </script>
+    
+    <!-- Go to Top button -->
+    <style>
+        .back-to-top {
+      cursor: pointer;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      display:none;
+  }
+      </style>
+      <script>
+      $(document).ready(function(){
+       $(window).scroll(function () {
+              if ($(this).scrollTop() > 50) {
+                  $('#back-to-top').fadeIn();
+              } else {
+                  $('#back-to-top').fadeOut();
+              }
+          });
+          // scroll body to 0px on click
+          $('#back-to-top').click(function () {
+              $('#back-to-top').tooltip('hide');
+              $('body,html').animate({
+                  scrollTop: 0
+              }, 800);
+              return false;
+          });
+          
+          $('#back-to-top').tooltip('show');
+  
+  });
+  </script>
+  </head>
+  <body class="bg-white font-sans leading-normal tracking-normal">
+    <div>
+      <header class="text-gray-700 body-font">
+          <div
+          class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        >
+          
+          <nav
+            class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+          >
+            <a href="#aboutUS" style="font-size: 200%;" class="mr-5 hover:text-gray-900">About LIC</a>
+            <a href="#plansSection" style="font-size: 200%;" class="mr-5 hover:text-gray-900">Plans</a>
+            <a href="#Servies" style="font-size: 200%;" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="" style="font-size: 200%;" class="mr-5  hover:text-gray-900">Trending Plans</a>
+          </nav>
+          <a style="font-size: 100%;" type="button" class="btn btn-primary" href="#contactPopup">
+            Contact Me
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner center rounded">
+        <div
+          class="carousel-item"
+          style="width: 100%; height: 450px; align-self: center;"
+        >
+          <img
+            style="width: 100%; height: 450px;"
+            class="d-block w-100 round"
+            src="./images/lic.png"
+            alt="Second slide"
+          />
+        </div>
+        <div
+          class="carousel-item active"
+          style="width: 100%; height: 450px; align-self: center;"
+        >
+          <img
+            style="width: 100%; height: 450px; "
+            class="d-block w-100 round"
+            src="./images/LICIndia-banner.png"
+            alt="First slide"
+          />
+        </div>
+
+        <div
+          class="carousel-item"
+          style="width: 100%; height: 450px; align-self: center;"
+        >
+          <img
+            style="width: 100%; height: 450px;"
+            class="d-block w-100 round"
+            src="./images/back1.jpg"
+            alt="Third slide"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="contactPopup" class="overlay">
+      <div class="popup">
+        <h2>Here i am</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <table>
+            <tr>
+              <td style="width:10%">
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+              </td>
+              <td><p>Mobile Number: +91 9421113857</p></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </td>
+              <td>
+                <p>Email: asdasd@gmail.com</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+              </td>
+              <td>
+                <p>Address: Ichalkaranji</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+
+    <div id="aboutUS"></div>
+
+    <div class="bg-light">
+      <div class="container py-5">
+        <div class="row h-100 align-items-center py-5">
+          <div class="col-lg-6">
+            <h1 class="display-4 color">About LIC</h1>
+            <p class="lead text-muted mb-0">
+              Life Insurance Corporation of India (abbreviated as LIC) is an
+              Indian state-owned insurance group and investment corporation
+              owned by the Government of India. The Life insurance Corporation
+              of India was founded on September 1, 1956, when the Parliament of
+              India passed the Life Insurance of India Act that nationalized the
+              insurance industry in India. Over 245 insurance companies and
+              provident societies were merged to create the state-owned Life
+              Insurance Corporation of India. As of 2019, Life Insurance
+              Corporation of India had total life fund of ₹28.3 trillion. The
+              total value of sold policies in the year 2018-19 is ₹21.4 million.
+              Life Insurance Corporation of India settled 26 million claims in
+              2018–19. It has 290 million policy holders.
+            </p>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img src="./images/about.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white py-5">
+      <div class="container py-5">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+            <h2 class="font-weight-light">Founding organisations</h2>
+            <p class="font-italic text-muted mb-4">
+                The Oriental Life Insurance Company, the first company in India offering life insurance coverage, was established in Kolkata in 1818. Its primary target market was the Europeans based in India, and it charged Indians heftier premiums. Surendranath Tagore had founded Hindustan Insurance Society, which later became Life Insurance Corporation.
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Life_Insurance_Corporation" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm"
+              >Learn More</a
+            >
+          </div>
+          <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
+            <img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg"
+              alt=""
+              class="img-fluid mb-4 mb-lg-0"
+            />
+          </div>
+        </div>
+        <div class="row align-items-center">
+          
+      </div>
+    </div>
+
+    <!-- Plan Section -->
+    <div id="plansSection">
+      <h1 class="display-4">Plans</h1>
+      
+      
+<div class="wrapper center-block">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            ENDOWMENT PLANS
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-body">
+              <div id="endowmentPlans">
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">New Endowment (914)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Jeevan Anand (915)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Single Premiun Endowment (917)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Jeevan Lakshya (933)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Jeevan Labh (936)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Aadhar Stambh (943)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Aadhar Shila (944)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin-top: 5%;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Micro Bachat (951)</h5>
+                      <p class="card-text">
+                        With supporting text below as a natural lead-in to additional
+                        content.
+                      </p>
+                      <a href="#" style="margin-top:2%;" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTT" aria-expanded="false" aria-controls="collapseTT">
+            WHOLE LIFE PLANS
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="card-body">
+           Whole Life Plans body
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              MONEY BACK PLANS
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFive">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                ULIP PLANS
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSix">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  SINGLE PERMIUM PLANS
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingSeven">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    TERM PLANS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingEight">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    PENSION/ANNUITY PLANS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingNine">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    HEALTH PLANS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTen">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    CHILD PLANS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingEleven">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    CLOSED PLANS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+          </div>
+  </div>
+  </div>
+
+
+    </div>
+    
+
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+  </body>
+  
+
+      </html>
