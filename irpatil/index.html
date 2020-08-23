@@ -13,6 +13,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="./CSS/accord.css">
+    <link rel="stylesheet" href="./CSS/cards.css">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -220,6 +221,23 @@
           width: 70%;
         }
       }
+
+        .bg-image {
+      /* The image used */
+      background-image: url("./images/back1.jpg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(4px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
     </style>
 
     <style>
@@ -313,19 +331,19 @@
   </script>
   </head>
   <body class="bg-white font-sans leading-normal tracking-normal">
+    
     <div>
       <header class="text-gray-700 body-font">
           <div
-          class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+          class="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center"
         >
           
-          <nav
-            class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"
           >
-            <a href="#aboutUS" style="font-size: 200%;" class="mr-5 hover:text-gray-900">About LIC</a>
-            <a href="#plansSection" style="font-size: 200%;" class="mr-5 hover:text-gray-900">Plans</a>
-            <a href="#Servies" style="font-size: 200%;" class="mr-5 hover:text-gray-900">Services</a>
-            <a href="" style="font-size: 200%;" class="mr-5  hover:text-gray-900">Trending Plans</a>
+            <a href="#aboutUS" style="font-size: 120%;" class="mr-5 hover:text-gray-900">About LIC</a>
+            <a href="#plansSection" style="font-size: 120%;" class="mr-5 hover:text-gray-900">Plans</a>
+            <a href="#servicesSection" style="font-size: 120%;" class="mr-5 hover:text-gray-900">Services</a>
+            <a href="#tendingSection" style="font-size: 120%;" class="mr-5  hover:text-gray-900">Trending Plans</a>
           </nav>
           <a style="font-size: 100%;" type="button" class="btn btn-primary" href="#contactPopup">
             Contact Me
@@ -334,58 +352,6 @@
       </header>
     </div>
 
-    <!-- <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-ride="carousel"
-      style="width: 100%;"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          class="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner center rounded">
-        <div
-          class="carousel-item"
-          style="width: 100%; height: 450px; align-self: center;"
-        >
-          <img
-            style="width: 100%; height: 450px;"
-            class="d-block w-100 round"
-            src="./images/lic.png"
-            alt="Second slide"
-          />
-        </div>
-        <div
-          class="carousel-item active"
-          style="width: 100%; height: 450px; align-self: center;"
-        >
-          <img
-            style="width: 100%; height: 450px; "
-            class="d-block w-100 round"
-            src="./images/LICIndia-banner.png"
-            alt="First slide"
-          />
-        </div>
-
-        <div
-          class="carousel-item"
-          style="width: 100%; height: 450px; align-self: center;"
-        >
-          <img
-            style="width: 100%; height: 450px;"
-            class="d-block w-100 round"
-            src="./images/back1.jpg"
-            alt="Third slide"
-          />
-        </div>
-      </div>
-    </div> -->
 
     <div id="contactPopup" class="overlay">
       <div class="popup">
@@ -421,12 +387,12 @@
     </div>
 
     <!-- About Section -->
-
+    
     <div id="aboutUS"></div>
 
     <div class="bg-light">
-      <div class="container py-5">
-        <div class="row h-100 align-items-center py-5">
+      <div class="container">
+        <div class="row h-100 align-items-center" style="margin-bottom: 30px;"></div>
           <div class="col-lg-6">
             <h1 class="display-4 color">About LIC</h1>
             <p class="lead text-muted mb-0">
@@ -459,7 +425,7 @@
             <p class="font-italic text-muted mb-4">
                 The Oriental Life Insurance Company, the first company in India offering life insurance coverage, was established in Kolkata in 1818. Its primary target market was the Europeans based in India, and it charged Indians heftier premiums. Surendranath Tagore had founded Hindustan Insurance Society, which later became Life Insurance Corporation.
             </p>
-            <a href="https://en.wikipedia.org/wiki/Life_Insurance_Corporation" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm"
+            <a href="https://en.wikipedia.org/wiki/Life_Insurance_Corporation" target="_blank" class="btn btn-primary px-5 rounded-pill shadow-sm"
               >Learn More</a
             >
           </div>
@@ -477,6 +443,7 @@
     </div>
 
     <!-- Plan Section -->
+    
     <div id="plansSection">
       <h1 class="display-4">Plans</h1>
       
@@ -606,7 +573,7 @@
       </div>
       <div id="collapseTT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
         <div class="card-body">
-           Whole Life Plans body
+           Whole Life Plans 
         </div>
       </div>
     </div>
@@ -620,7 +587,7 @@
         </div>
         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
           <div class="panel-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              Money back plans           
           </div>
         </div>
       </div>
@@ -634,7 +601,7 @@
           </div>
           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
             <div class="panel-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                ULIP Plans            
             </div>
           </div>
         </div>
@@ -648,7 +615,7 @@
             </div>
             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Single Premium plans
               </div>
             </div>
           </div>
@@ -662,7 +629,7 @@
               </div>
               <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  Term Plans
                 </div>
               </div>
           </div>
@@ -676,7 +643,7 @@
               </div>
               <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  Pension/annuity plans
                 </div>
               </div>
           </div>
@@ -690,7 +657,7 @@
               </div>
               <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  Health Plans
                 </div>
               </div>
           </div>
@@ -704,7 +671,7 @@
               </div>
               <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  Child Plans
                 </div>
               </div>
           </div>
@@ -718,19 +685,406 @@
               </div>
               <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
                 <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  Closed Plans
                 </div>
               </div>
           </div>
   </div>
   </div>
 
+  <div id="servicesSection">
+    <h1 class="display-4">Services</h1>
+
+           <!-- Service Cards -->
+           <div id="cards_landscape_wrap-2">
+            <div class="container">
+                <div class="row" style="margin-top: -5%; margin-bottom: -2%;">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="card-flyer">
+                                <div class="text-box">
+                                    <div class="image-box">
+                                        <img src="./images/about.png" alt="" />
+                                    </div>
+                                    <div class="text-container">
+                                        <h6>Service 01</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="card-flyer">
+                                <div class="text-box">
+                                    <div class="image-box">
+                                        <img src="./images/about.png" alt="" />
+                                    </div>
+                                    <div class="text-container">                                    
+                                        <h6>Service 02</h6>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="card-flyer">
+                                <div class="text-box">
+                                    <div class="image-box">
+                                        <img src="./images/about.png" alt="" />
+                                    </div>
+    
+                                    <div class="text-container">
+                                        <h6>Service 03</h6>
+                                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="card-flyer">
+                                <div class="text-box">
+                                    <div class="image-box">
+                                        <img src="./images/about.png" alt="" />
+                                    </div>
+                                    <div class="text-container">
+                                        <h6>Service 04</h6>
+                                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    <!-- <div>
+    <div class="row d-flex justify-content-center" style="margin-bottom: 30px;" style="align-content: center;">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="/images/about.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+        </div>
+      </div>
+
+      <div class="max-w-sm rounded overflow-hidden shadow-lg" >
+        <img class="w-full" src="/images/about.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+        </div>
+      </div>
+
+      <div class="max-w-sm rounded overflow-hidden shadow-lg" >
+        <img class="w-full" src="/images/about.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+        </div>
+      </div>
+
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="/images/about.png" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+        </div>
+      </div>
+
+      
+    </div>
+  </div> -->
 
     </div>
     
+    <div id="tendingSection">
+      <h1 class="display-4">Trending Plans</h1>
+  
+  
+      </div>
 
     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 
+
+    <!-- Testomonial -->
+      <style>
+        #quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 60px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-indicators {
+    position: relative;
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-top: 20px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all .4s ease-in;
+    vertical-align: middle;
+}
+#quote-carousel .carousel-indicators .active {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+    transition: all .2s;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+      </style>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+              <!-- Carousel Slides / Quotes -->
+              <div class="carousel-inner text-center">
+                  <!-- Quote 1 -->
+                  <div class="item active">
+                      <blockquote>
+                          <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                  <small>Person A</small>
+                              </div>
+                          </div>
+                      </blockquote>
+                  </div>
+                  <!-- Quote 2 -->
+                  <div class="item">
+                      <blockquote>
+                          <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                  <small>Person B</small>
+                              </div>
+                          </div>
+                      </blockquote>
+                  </div>
+                  <!-- Quote 3 -->
+                  <div class="item">
+                      <blockquote>
+                          <div class="row">
+                              <div class="col-sm-8 col-sm-offset-2">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                  <small>Person C</small>
+                              </div>
+                          </div>
+                      </blockquote>
+                  </div>
+              </div>
+              <!-- Bottom Carousel Indicators -->
+              <ol class="carousel-indicators">
+                  <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt="">
+                  </li>
+                  <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt="">
+                  </li>
+                  <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                  </li>
+              </ol>
+
+              <!-- Carousel Buttons Next/Prev -->
+              <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+              <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+          </div>
+      </div>
+  </div>
+  
+</div>
+<link href='https://fonts.googleapis.com/css?family=Rajdhani|Pacifico' rel='stylesheet' type='text/css'/>
+<link href="./CSS/contact.css" rel="stylesheet"/>
+<div class="wrapper">
+  <div class="title">
+    Contact Us
+  </div>
+  <form class="form">
+    <input type="text" class="name field-in font" placeholder="Your Name"/>
+    
+    <input type="text" class="email field-in font" placeholder="Email"/>
+    
+    <textarea class="message field-in font" placeholder="Message"></textarea> 
+    
+    <button class="submit font" href="#">Submit</button>
+  </form>  	
+  <div class="shadow"></div>
+</div>
+
+<style>
+  .copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #0275d8;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #0275d8;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+</style>
+<link rel="stylesheet" href="./CSS/footer.css">
+<link rel="stylesheet" href="./CSS/popup.css">
+ <script>
+   // Quick & dirty toggle to demonstrate modal toggle behavior
+$('.modal-toggle').on('click', function(e) {
+    e.preventDefault();
+    $('.modal').toggleClass('is-visible');
+  });
+ </script>
+
+ 
+<!-- Footer -->
+<div class="footer">
+
+  <!-- Copyright -->
+  <div class="copyright-area">
+    <div class="container">
+      <div class="row">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                    <p>Website Created By: <a href="#developerContact">Sachin</a></p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                  <ul>
+                      <li><a href="#">Home</a></li>  
+                      <li><a href="#developerContact" class="btn btn-light" >Contact</a></li>
+                  </ul>
+                  <!-- <div class="modal">
+                    <div class="modal-overlay modal-toggle"></div>
+                    <div class="modal-wrapper modal-transition">
+                      <div class="modal-header">
+                        <button class="modal-close modal-toggle"><svg class="icon-close icon" viewBox="0 0 32 32"><use xlink:href="#icon-close"></use></svg></button>
+                        <h2 class="modal-heading">This is a modal</h2>
+                      </div>
+                      
+                      <div class="modal-body">
+                        <div class="modal-content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum delectus, libero, accusantium dolores inventore obcaecati placeat cum sapiente vel laboriosam similique totam id ducimus aperiam, ratione fuga blanditiis maiores.</p>
+                          <button class="modal-toggle">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  
+              </div>
+          </div>
+        </div>
+        
+    </div>
+</div>
+  <!-- Copyright -->
+  
+
+<div id="developerContact" class="overlay">
+  <div class="popup">
+    <h2>Here i am...</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      <table>
+        <tr>
+          <td style="width:10%">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+          </td>
+          <td><p>Cell Phone: 9028812913</p></td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </td>
+          <td>
+            <p>Email: sacpatil799@gmail.com</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </td>
+          <td>
+            <p>Address: Balaji Colony, Lane no.1, Ichalkaranji</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
   </body>
   
 
